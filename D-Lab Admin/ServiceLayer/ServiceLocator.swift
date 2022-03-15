@@ -42,7 +42,7 @@ class ServiceLocator {
     }
     
     func buildLogin() -> LoginGraph {
-        return LoginGraph(coordinator: coordinator, authService: authService)
+        return LoginGraph(injector: self, authService: authService)
     }
     
     func buildOrders() -> OrdersGraph {

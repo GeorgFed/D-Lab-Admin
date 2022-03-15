@@ -126,4 +126,8 @@ extension LoginView {
     func signUpPressed(_ sender: UIButton) {
         interactor.signUp()
     }
+    
+    func setNewRootController(viewController: UIViewController) {
+        view.window?.rootViewController = viewController
+    }
 }

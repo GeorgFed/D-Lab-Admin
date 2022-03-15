@@ -34,8 +34,6 @@
 		3C1E946227E0A8C1001E61F4 /* PaymentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E946127E0A8C1001E61F4 /* PaymentsService.swift */; };
 		3C1E946427E0A907001E61F4 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E946327E0A907001E61F4 /* Payment.swift */; };
 		3CCE047527DE342F007FD3E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE047427DE342F007FD3E0 /* AppDelegate.swift */; };
-		3CCE047727DE342F007FD3E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE047627DE342F007FD3E0 /* SceneDelegate.swift */; };
-		3CCE047927DE342F007FD3E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE047827DE342F007FD3E0 /* ViewController.swift */; };
 		3CCE047E27DE3430007FD3E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CCE047D27DE3430007FD3E0 /* Assets.xcassets */; };
 		3CCE048127DE3430007FD3E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCE047F27DE3430007FD3E0 /* LaunchScreen.storyboard */; };
 		3CCE048F27DE4EB8007FD3E0 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE048E27DE4EB8007FD3E0 /* TabBar.swift */; };
@@ -98,8 +96,6 @@
 		3C1E946327E0A907001E61F4 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		3CCE047127DE342F007FD3E0 /* D-Lab Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D-Lab Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCE047427DE342F007FD3E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3CCE047627DE342F007FD3E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3CCE047827DE342F007FD3E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3CCE047D27DE3430007FD3E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CCE048027DE3430007FD3E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CCE048227DE3430007FD3E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -287,10 +283,8 @@
 		3CCE049427DE53A9007FD3E0 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				3CCE047827DE342F007FD3E0 /* ViewController.swift */,
 				3CCE049527DE53CD007FD3E0 /* AppGraph.swift */,
 				3CCE047427DE342F007FD3E0 /* AppDelegate.swift */,
-				3CCE047627DE342F007FD3E0 /* SceneDelegate.swift */,
 				3CCE047F27DE3430007FD3E0 /* LaunchScreen.storyboard */,
 			);
 			path = App;
@@ -471,7 +465,6 @@
 				3C1E946427E0A907001E61F4 /* Payment.swift in Sources */,
 				3CCE04BA27DE785F007FD3E0 /* Layout+Utils.swift in Sources */,
 				3CCE04C027DE82F6007FD3E0 /* Label+Utils.swift in Sources */,
-				3CCE047927DE342F007FD3E0 /* ViewController.swift in Sources */,
 				3CCE04BE27DE829E007FD3E0 /* Font+Utils.swift in Sources */,
 				3C1E946027E0A832001E61F4 /* PaymentsCell.swift in Sources */,
 				3CCE049127DE528A007FD3E0 /* ServiceLocator.swift in Sources */,
@@ -506,7 +499,6 @@
 				3CCE04A427DE5D7E007FD3E0 /* LoginView.swift in Sources */,
 				3C1E943C27DFB59C001E61F4 /* AuthResponse.swift in Sources */,
 				3CCE04BC27DE78AE007FD3E0 /* View+Utils.swift in Sources */,
-				3CCE047727DE342F007FD3E0 /* SceneDelegate.swift in Sources */,
 				3CCE04DA27DEBA5B007FD3E0 /* Clinic.swift in Sources */,
 				3C1E943A27DFB3B4001E61F4 /* UsersCreds.swift in Sources */,
 				3C1E945C27E0A795001E61F4 /* FinancesInteractor.swift in Sources */,

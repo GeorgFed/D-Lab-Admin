@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 protocol ILoginPresenter {
     // execution required after init
@@ -12,10 +12,10 @@ class LoginPresenter: ILoginPresenter {
     
     weak var view: LoginView?
     
-    private let coordinator: Coordinator
+    private let injector: ServiceLocator
     
-    init(coordinator: Coordinator) {
-        self.coordinator = coordinator
+    init(injector: ServiceLocator) {
+        self.injector = injector
     }
     
     func set(view: LoginView) {
@@ -23,8 +23,8 @@ class LoginPresenter: ILoginPresenter {
     }
     
     func openMain() {
-        guard let view = view else { return }
-        view.show(coordinator.getViewController(for: .main), sender: view)
+        let tabBar = TabBar(viewControllers: [createOrderScreen(), createClientsScreen(), createFinancesScreen()])
+        view?.setNewRootController(viewController: tabBar)
     }
     
     func updateState() {
@@ -34,5 +34,32 @@ class LoginPresenter: ILoginPresenter {
     
     func setError(_ error: Error) {
         
+    }
+    
+    func createOrderScreen() -> UINavigationController {
+        let graph = injector.buildOrders()
+        let viewController = graph.viewController
+        viewController.tabBarItem.title = "Наряды"
+        viewController.tabBarItem.image = UIImage(systemName: "folder")
+        viewController.tabBarItem.selectedImage = UIImage(systemName: "folder.fill")
+        return UINavigationController(rootViewController: viewController)
+    }
+    
+    func createClientsScreen() -> UINavigationController {
+        let graph = injector.buildClients()
+        let viewController = graph.viewController
+        viewController.tabBarItem.title = "Клиенты"
+        viewController.tabBarItem.image = UIImage(systemName: "person.2")
+        viewController.tabBarItem.selectedImage = UIImage(systemName: "person.2.fill")
+        return UINavigationController(rootViewController: viewController)
+    }
+    
+    func createFinancesScreen() -> UINavigationController {
+        let graph = injector.buildPayments()
+        let viewController = graph.viewController
+        viewController.tabBarItem.title = "Финансы"
+        viewController.tabBarItem.image = UIImage(systemName: "dollarsign.square")
+        viewController.tabBarItem.selectedImage = UIImage(systemName: "dollarsign.square.fill")
+        return UINavigationController(rootViewController: viewController)
     }
 }

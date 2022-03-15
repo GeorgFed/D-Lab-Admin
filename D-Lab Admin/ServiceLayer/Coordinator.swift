@@ -76,9 +76,9 @@ final class Coordinator {
             let graph = injector.buildLogin()
             return UINavigationController(rootViewController: graph.viewController)
         case .main:
-            return DLTabBar(viewControllers: [createOrderScreen(),
-                                              createClientsScreen(),
-                                              createFinancesScreen()])
+            return TabBar(viewControllers: [createOrderScreen(),
+                                            createClientsScreen(),
+                                            createFinancesScreen()])
         }
     }
 }
