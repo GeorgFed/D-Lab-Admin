@@ -55,6 +55,10 @@ extension OrdersView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationController?.pushViewController(OrderDetailssView(order: interactor.orders[indexPath.section]), animated: true)
+    }
+    
     @objc
     func onExit() {
         interactor.onExit()

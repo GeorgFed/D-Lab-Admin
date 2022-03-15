@@ -4,16 +4,16 @@ class PaymentsView: UIViewController {
     private let interactor: IPaymentsInteractor
     
     lazy var tableView: UITableView = {
-    let tableView = UITableView(frame: .zero, style: .insetGrouped)
-    tableView.translatesAutoresizingMaskIntoConstraints = false
-    tableView.backgroundColor = .secondary
-    // tableView.separatorStyle = .none
-    tableView.delegate = self
-    tableView.dataSource = self
-    tableView.rowHeight = UITableView.automaticDimension
-    tableView.register(PaymentsCell.self, forCellReuseIdentifier: "\(PaymentsCell.self)")
-    return tableView
-}()
+        let tableView = UITableView(frame: .zero, style: .insetGrouped)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .secondary
+        // tableView.separatorStyle = .none
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.register(PaymentsCell.self, forCellReuseIdentifier: "\(PaymentsCell.self)")
+        return tableView
+    }()
     
     init(interactor: IPaymentsInteractor) {
         self.interactor = interactor

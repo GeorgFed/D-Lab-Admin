@@ -33,6 +33,7 @@
 		3C1E946027E0A832001E61F4 /* PaymentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E945F27E0A832001E61F4 /* PaymentsCell.swift */; };
 		3C1E946227E0A8C1001E61F4 /* PaymentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E946127E0A8C1001E61F4 /* PaymentsService.swift */; };
 		3C1E946427E0A907001E61F4 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E946327E0A907001E61F4 /* Payment.swift */; };
+		3C1E946727E0EF93001E61F4 /* OrderDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E946627E0EF93001E61F4 /* OrderDetailsView.swift */; };
 		3CCE047527DE342F007FD3E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE047427DE342F007FD3E0 /* AppDelegate.swift */; };
 		3CCE047E27DE3430007FD3E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CCE047D27DE3430007FD3E0 /* Assets.xcassets */; };
 		3CCE048127DE3430007FD3E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCE047F27DE3430007FD3E0 /* LaunchScreen.storyboard */; };
@@ -94,6 +95,7 @@
 		3C1E945F27E0A832001E61F4 /* PaymentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsCell.swift; sourceTree = "<group>"; };
 		3C1E946127E0A8C1001E61F4 /* PaymentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsService.swift; sourceTree = "<group>"; };
 		3C1E946327E0A907001E61F4 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		3C1E946627E0EF93001E61F4 /* OrderDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsView.swift; sourceTree = "<group>"; };
 		3CCE047127DE342F007FD3E0 /* D-Lab Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D-Lab Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCE047427DE342F007FD3E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CCE047D27DE3430007FD3E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,6 +179,14 @@
 				3C1E945D27E0A7A7001E61F4 /* FinancesPresenter.swift */,
 			);
 			path = Table;
+			sourceTree = "<group>";
+		};
+		3C1E946527E0EF5D001E61F4 /* OrderDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3C1E946627E0EF93001E61F4 /* OrderDetailsView.swift */,
+			);
+			path = OrderDetails;
 			sourceTree = "<group>";
 		};
 		3CCE046827DE342E007FD3E0 = {
@@ -264,6 +274,7 @@
 		3CCE048C27DE4E30007FD3E0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3C1E946527E0EF5D001E61F4 /* OrderDetails */,
 				3CCE04CB27DEAEE9007FD3E0 /* Finances */,
 				3CCE04CA27DEAEE1007FD3E0 /* Clients */,
 				3CCE04C927DEAE64007FD3E0 /* Orders */,
@@ -470,6 +481,7 @@
 				3CCE049127DE528A007FD3E0 /* ServiceLocator.swift in Sources */,
 				3CCE04D327DEAF76007FD3E0 /* OrdersPresenter.swift in Sources */,
 				3CCE04D127DEAF57007FD3E0 /* OrdersInteractor.swift in Sources */,
+				3C1E946727E0EF93001E61F4 /* OrderDetailsView.swift in Sources */,
 				3C1E943627DFAE95001E61F4 /* URL+Utils.swift in Sources */,
 				3C1E943227DFADC2001E61F4 /* URLRequestBuilder.swift in Sources */,
 				3C1E942C27DFACAC001E61F4 /* URLSessionManager.swift in Sources */,
