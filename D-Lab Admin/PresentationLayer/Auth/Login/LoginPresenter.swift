@@ -33,7 +33,9 @@ class LoginPresenter: ILoginPresenter {
     }
     
     func setError(_ error: Error) {
-        
+        let alert = UIAlertController(title: "Неверный логин или пароль", message: "Пожалуйста, попробуйте снова", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ок", style: .cancel))
+        view?.present(alert, animated: true, completion: nil)
     }
     
     func createOrderScreen() -> UINavigationController {
