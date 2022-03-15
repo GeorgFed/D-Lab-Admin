@@ -33,11 +33,6 @@ class ClientsView: UIViewController {
         let segment: UISegmentedControl = UISegmentedControl(items: ["Доктора", "Клиники"])
         segment.setWidth(160, forSegmentAt: 0)
         segment.setWidth(160, forSegmentAt: 1)
-//        if #available(iOS 13.0, *) {
-//            segment.selectedSegmentTintColor = .primary
-//        } else {
-//            segment.tintColor = .primary
-//        }
         
         segment.selectedSegmentIndex = 0
         segment.setTitleTextAttributes([NSAttributedString.Key.font : UIFont.body], for: .normal)

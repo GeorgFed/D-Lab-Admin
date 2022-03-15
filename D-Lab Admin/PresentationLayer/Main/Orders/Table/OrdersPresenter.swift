@@ -4,16 +4,17 @@ protocol IOrdersPresenter {
     // execution required after init
     func set(view: OrdersView)
     func updateState()
+    func showLogin()
 }
 
 class OrdersPresenter: IOrdersPresenter {
     
     weak var view: OrdersView?
     
-    private let coordinator: Coordinator
+    private let injector: ServiceLocator
     
-    init(coordinator: Coordinator) {
-        self.coordinator = coordinator
+    init(injector: ServiceLocator) {
+        self.injector = injector
     }
     
     func set(view: OrdersView) {
@@ -30,5 +31,10 @@ class OrdersPresenter: IOrdersPresenter {
     
     func setLoading() {
         
+    }
+    
+    func showLogin() {
+        let graph = injector.buildLogin()
+        view?.setNewRootController(viewController: graph.viewController)
     }
 }

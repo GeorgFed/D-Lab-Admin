@@ -12,6 +12,7 @@ typealias AuthCompletion = (_ result: AuthResult) -> Void
 
 protocol IAuthService {
     func authorize(user creds: UserCreds, completion: @escaping EmptyCompletion)
+    func signOut()
 }
 
 final class AuthService: IAuthService {
@@ -45,6 +46,10 @@ final class AuthService: IAuthService {
                 completion(.failure(error))
             }
         }
+    }
+    
+    func signOut() {
+        self.userDefaults.set(key: .isSignedIn, value: false)
     }
     
     private func post(body: UserCreds, completion: @escaping AuthCompletion) {

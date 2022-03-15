@@ -46,7 +46,7 @@ class ServiceLocator {
     }
     
     func buildOrders() -> OrdersGraph {
-        return OrdersGraph(coordinator: coordinator, ordersService: ordersService)
+        return OrdersGraph(injector: self, ordersService: ordersService, authService: authService)
     }
     
     func buildClients() -> ClientsGraph {

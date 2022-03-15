@@ -4,17 +4,20 @@ protocol IOrdersInteractor {
     var orders: [Order] { get }
     
     func fetch()
+    func onExit()
 }
 
 class OrdersInteractor: IOrdersInteractor {
     let presenter: IOrdersPresenter
     let ordersService: IOrdersService
+    let authService: IAuthService
     
     private(set) var orders: [Order] = []
     
-    init(presenter: IOrdersPresenter, ordersService: OrdersService) {
+    init(presenter: IOrdersPresenter, ordersService: OrdersService, authService: AuthService) {
         self.presenter = presenter
         self.ordersService = ordersService
+        self.authService = authService
     }
     
     func fetch() {
@@ -29,5 +32,10 @@ class OrdersInteractor: IOrdersInteractor {
                 break
             }
         }
+    }
+    
+    func onExit() {
+        authService.signOut()
+        presenter.showLogin()
     }
 }

@@ -23,6 +23,11 @@ class OrdersView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Наряды"
+        
+        let item = UIBarButtonItem(image: UIImage(systemName: "arrow.up.backward"), style: .plain, target: self, action: #selector(onExit))
+        self.navigationController?.navigationBar.tintColor = .primary
+        self.navigationItem.leftBarButtonItem = item
+        
         view.addSubview(tableView, anchors: [.leading(0), .top(0), .trailing(0), .bottom(0)])
         interactor.fetch()
     }
@@ -48,6 +53,15 @@ extension OrdersView: UITableViewDelegate, UITableViewDataSource {
         }
         cell.setup(with: interactor.orders[indexPath.section])
         return cell
+    }
+    
+    @objc
+    func onExit() {
+        interactor.onExit()
+    }
+    
+    func setNewRootController(viewController: UIViewController) {
+        view.window?.rootViewController = viewController
     }
     
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
