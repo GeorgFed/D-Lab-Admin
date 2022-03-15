@@ -35,7 +35,11 @@ class OrdersInteractor: IOrdersInteractor {
     }
     
     func onExit() {
-        authService.signOut()
-        presenter.showLogin()
+        presenter.showExitAlert { [weak self] success in
+            if success {
+                self?.authService.signOut()
+                self?.presenter.showLogin()
+            }
+        }
     }
 }

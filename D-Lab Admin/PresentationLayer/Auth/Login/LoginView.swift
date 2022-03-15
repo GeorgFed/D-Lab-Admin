@@ -54,7 +54,7 @@ class LoginView: UIViewController {
     }()
     
     private lazy var fieldStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [loginField, passwordField, signInButton, signUpButton])
+        let stack = UIStackView(arrangedSubviews: [loginField, passwordField, signInButton])
         stack.axis = .vertical
         stack.spacing = LoginValues.stackSpace
         return stack
