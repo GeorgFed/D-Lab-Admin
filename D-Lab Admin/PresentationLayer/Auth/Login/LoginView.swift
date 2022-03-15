@@ -3,6 +3,10 @@ import UIKit
 class LoginView: UIViewController {
     private let interactor: ILoginInteractor
     
+    lazy var titleLabel: UILabel = {
+        return UILabel(frame: .zero, model: UILabel.ViewModel(text: "Вход", font: .title, color: .black))
+    }()
+    
     lazy var loginField: DLTextField = {
         let model = DLTextField.ViewModel(placeholderText: LoginStrings.loginFieldPlaceholder)
         let field = DLTextField(model: model, frame: .zero)
@@ -54,7 +58,7 @@ class LoginView: UIViewController {
     }()
     
     private lazy var fieldStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [loginField, passwordField, signInButton])
+        let stack = UIStackView(arrangedSubviews: [titleLabel, loginField, passwordField, signInButton])
         stack.axis = .vertical
         stack.spacing = LoginValues.stackSpace
         return stack
